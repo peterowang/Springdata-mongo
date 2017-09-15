@@ -1,12 +1,34 @@
 package com.mongodb.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
 /**
  * Created by BFD-593 on 2017/9/14.
+ * {
+ * "_id" : ObjectId("59ba473240b5bdf4e5481d4b"),
+ * "province" : "海南",
+ * "age" : 21.0,
+ * "subjects" : [
+ * {
+ * "name" : "语文",
+ * "score" : 53.0
+ * },
+ * {
+ * "name" : "数学",
+ * "score" : 27.0
+ * },
+ * {
+ * "name" : "英语",
+ * "score" : 35.0
+ * }
+ * ],
+ * "name" : "刘雨"
+ * }
  */
+@Document(collection = "student")
 public class Student {
     @Id
     private String id;

@@ -21,7 +21,7 @@ public interface UserMongodbRespository extends MongoRepository<User,String>{
     /**
      * 方法名查询 根据age
      * @param age1
-     * @param age2
+     * @param name
      * @return
      */
     List<User> findByAgeGreaterThanEqualAndNameEquals(int age1, String name);
